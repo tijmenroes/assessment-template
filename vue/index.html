@@ -1,0 +1,24 @@
+<html>
+
+<title> Vue template with axios </title>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="script.js" type="module"></script>
+<link rel="stylesheet" href="style.css"></style>
+<body>
+    <div id="app">
+        <!-- Inside #app, vue can be used.  -->
+        <table>
+            <tr>
+                <th v-for="name in tableNames">{{name}}</th>
+            </tr>
+            <tr v-for="entry in weatherData">
+                <!-- For each entry in the vue prop weatherData, display the time and temp key -->
+                <td>{{entry.time}}</td>
+                <td>{{entry.temp}}</td>
+            </tr>
+        </table>
+      </div>
+
+</body>
+</html>
